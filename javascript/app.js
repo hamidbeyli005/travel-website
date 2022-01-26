@@ -29,10 +29,22 @@ let themeBtn = document.querySelector("#theme-btn");
 themeBtn.onclick = () => {
   themeBtn.classList.toggle("fa-sun");
 
-  if(themeBtn.classList.contains("fa-sun")){
-      document.body.classList.add("active");
-  }else{
+  if (themeBtn.classList.contains("fa-sun")) {
+    document.body.classList.add("active");
+  } else {
     document.body.classList.remove("active");
   }
-
 };
+
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
